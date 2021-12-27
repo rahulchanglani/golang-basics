@@ -3,10 +3,10 @@ package main
 import "fmt"
 
 var name = "Rahul"
-var num1 int
+var num1 int // this is possible in global and local scope
 
 func main() {
-	str2 := "abc"
+	str2 := "abc" // Shorthand variable only possible in local scope
 	fmt.Println(num1)
 	fmt.Printf("%T", num1)
 	fmt.Printf("%v", name)

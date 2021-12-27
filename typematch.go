@@ -2,6 +2,8 @@ package main
 
 import "fmt"
 
+const PI = 3.14
+
 func main() {
 	var num1 int16 = 20
 	var num2 int32 = 33
@@ -12,4 +14,5 @@ func main() {
 
 	loc, sal := "BDC", 222
 	fmt.Println(loc, sal)
+	fmt.Println(PI)
 }
