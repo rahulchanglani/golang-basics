@@ -3,6 +3,7 @@ package main
 import "fmt"
 
 const PI = 3.14
+const ID int = 89898
 
 func main() {
 	var num1 int16 = 20
@@ -14,5 +15,5 @@ func main() {
 
 	loc, sal := "BDC", 222
 	fmt.Println(loc, sal)
-	fmt.Println(PI)
+	fmt.Println(PI, ID)
 }
