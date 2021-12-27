@@ -3,6 +3,8 @@ on: [push]
 jobs:
   print-hello-world:
     runs-on: ubuntu-latest
+    outputs:
+      text: ${{steps.finished.outputs.text}}
     env:
       VERCEL_PROJECT_ID: $ {{secrets.VERCEL_PROJECT_ID}}
       VERCEL_ORG_ID: $ {{secrets.VERCEL_ORG_ID}}
@@ -19,7 +21,17 @@ jobs:
           mkdir build
           cd build
           touch project.json
-          echo '{"projectId":"$VERCEL_PROJECT_ID", "orgId":"$VERCEL_ORG_ID"}' > project.json
+          echo "{\"projectId\":\"$VERCEL_PROJECT_ID\", \"orgId\":\"$VERCEL_ORG_ID\"}" > project.json
       - run: tree
       - name: Finished setup 
         run: echo "Hurray!"
+    print-hello-world2:
+      needs: print-hello-world
+      runs-on: ubuntu-latest
+      env:
+        MY_JOB_OUTPUT: ${{needs.print-hello-world.outputs.text}}
+      steps:
+        - run: echo "\n YOLO"
+        - name: finish
+          id: finished
+          run: echo "::set-output name=text::fuWorld"
