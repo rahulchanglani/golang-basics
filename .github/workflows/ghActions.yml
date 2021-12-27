@@ -11,18 +11,16 @@ jobs:
     steps:
       - run: echo "\n Hello world"
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-go@v2
         with:
-          node-version: '14.17.0'
-      - name: Build project
-        run: node -v
-      - name: Deploy
+          go-version: '^1.13.1'
+        run: go version
+      - name: Prepare for Deploy
         run: |
           mkdir build
           cd build
           touch project.json
           echo "{\"projectId\":\"$VERCEL_PROJECT_ID\", \"orgId\":\"$VERCEL_ORG_ID\"}" > project.json
-      - run: tree
       - name: Finished setup 
         run: echo "Hurray!"
   print-hello-world2:
