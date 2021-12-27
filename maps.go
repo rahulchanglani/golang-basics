@@ -14,4 +14,7 @@ func main() {
 
 	myMap[104]="forth"
 	fmt.Println(myMap[104])
+
+	delete(myMap, 101)
+	fmt.Println(myMap)
 }
