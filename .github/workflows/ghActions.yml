@@ -11,9 +11,11 @@ jobs:
     steps:
       - run: echo "\n Hello world"
       - uses: actions/checkout@v2
-      - uses: actions/setup-go@v2
+      - name: Setup
+        uses: actions/setup-go@v2
         with:
           go-version: '^1.13.1'
+      - name: Version
         run: go version
       - name: Prepare for Deploy
         run: |
