@@ -6,4 +6,4 @@ jobs:
     steps:
       - run: echo "\n Hello world"
       - uses: actions/checkout@v2
-      - tun: tree
+      - run: tree
