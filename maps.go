@@ -17,4 +17,8 @@ func main() {
 
 	delete(myMap, 101)
 	fmt.Println(myMap)
+
+	myMap2 := make(map[string]string)
+	fmt.Println(myMap2)
+
 }

@@ -3,10 +3,14 @@ package main
 import "fmt"
 
 func main() {
-	arr := []int{2, 4, 5, 6, 7}
+	arr := [...]int{1,2,3,4,5}
 	for _, data := range arr {
 		fmt.Println(">> ", data)
 	}
+	array2 := arr
+	array2[1] = 10
+	fmt.Println(arr)
+	fmt.Println(array2)
 
 	// string array
 	name := []string{"Om", "RS"}
