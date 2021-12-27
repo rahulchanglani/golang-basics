@@ -13,4 +13,7 @@ func main() {
 	// j = string(i)    // gives * on converting to string
 	j = strconv.Itoa(i)
 	fmt.Printf("%v, %T\n", j, j)
+
+	var n1 int16 = 20
+	fmt.Printf("%T, %v", int32(n1), int32(n1))
 }
