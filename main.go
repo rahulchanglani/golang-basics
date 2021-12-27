@@ -15,5 +15,13 @@ func main() {
 	fmt.Println(num2)
 	var str5 string
 	str5 = "xyz"
-	fmt.Printf("%s",str5)
+	fmt.Printf("%s", str5)
+	var token string
+	fmt.Println("\nEnter the token")
+	fmt.Scanln(&token)
+	fmt.Printf("Entered token is %s", token)
+	fmt.Println("\nEnter two numbers")
+	var n1, n2 int
+	fmt.Scanln(&n1, &n2)
+	fmt.Println("\nProduct of 2 nos is", (n1 * n2))
 }
