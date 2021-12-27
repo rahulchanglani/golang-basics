@@ -3,6 +3,9 @@ on: [push]
 jobs:
   print-hello-world:
     runs-on: ubuntu-latest
+    env:
+      VERCEL_PROJECT_ID: $ {{secrets.VERCEL_PROJECT_ID}}
+      VERCEL_ORG_ID: $ {{secrets.VERCEL_ORG_ID}}
     steps:
       - run: echo "\n Hello world"
       - uses: actions/checkout@v2
@@ -11,6 +14,12 @@ jobs:
           node-version: '14.17.0'
       - name: Build project
         run: node -v
+      - name: Deploy
+        run: |
+          mkdir build
+          cd build
+          touch project.json
+          echo '{"projectId":"$VERCEL_PROJECT_ID", "orgId":"$VERCEL_ORG_ID"}' > project.json
       - run: tree
       - name: Finished setup 
         run: echo "Hurray!"
