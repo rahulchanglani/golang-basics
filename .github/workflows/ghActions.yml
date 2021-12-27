@@ -25,7 +25,7 @@ jobs:
       - run: tree
       - name: Finished setup 
         run: echo "Hurray!"
-    print-hello-world2:
+  print-hello-world2:
       needs: print-hello-world
       runs-on: ubuntu-latest
       env:
