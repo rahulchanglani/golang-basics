@@ -18,4 +18,6 @@ func main() {
 	loc, sal := "BDC", 222
 	fmt.Println(loc, sal)
 	fmt.Println(PI, ID)
+
+	fmt.Printf("New year sale upto %%70 discount\n")
 }
