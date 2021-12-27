@@ -9,4 +9,7 @@ func main() {
 
 	var n1,n2,n3 int = 12,13,14
 	fmt.Println(n1 + n2 + n3)
+
+	loc, sal := "BDC", 222
+	fmt.Println(loc, sal)
 }

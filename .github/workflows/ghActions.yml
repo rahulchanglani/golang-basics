@@ -5,4 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "\n Hello world"
-      - run: echo "\n Hello world2"
+      - uses: actions/checkout@v2
+      - tun: tree
