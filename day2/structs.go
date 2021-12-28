@@ -32,6 +32,8 @@ func main() {
 	s := Shape{length:4,
 		rect: Rectangle{12,4,"Teal"}}
 	fmt.Println(s)
+	fmt.Println(s.length)
+	fmt.Println(s.rect.color)
 }
 
 type Rectangle struct {
