@@ -20,6 +20,8 @@ func main() {
 	fmt.Printf("%T\n", strings.Split(info, "S"))
 	fmt.Println(strings.Index(info, "i")) // index starts from 0
 	fmt.Println(strings.Index(info, " "))
+	fmt.Println(strings.Replace(info, "s", "sa", 2))
+	fmt.Println(info[0:1])
 
 	////
 	words := [...]string{"Seven", "even", "Maven", "Amen", "eleven"}
