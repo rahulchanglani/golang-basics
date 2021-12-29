@@ -16,9 +16,5 @@ func main() {
 	fd := os.Mkdir("myfolder",0644) // windows permission to create folder 0777, rwx
 
 	// 0644 is octal mode, RW is for owning user
-	
 	fmt.Println("folder created", fd)
-
-	
-	
 }
