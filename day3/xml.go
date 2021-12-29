@@ -21,7 +21,6 @@ var myxml = []byte(
 	<id>345</id>
 	<loc>Ban</loc>
 	<emob>989898989</emob>
-	<emob>989898980</emob>
 	</emp>
 	</comp>`)
 
@@ -42,4 +41,7 @@ func main() {
 	var empObj mycomp
 	xml.Unmarshal(myxml, &empObj)
 	fmt.Println(empObj)
+	for i:=0;i<len(empObj.Emp);i++ {
+		fmt.Printf("\n- %v",empObj.Emp[i])
+	}
 }

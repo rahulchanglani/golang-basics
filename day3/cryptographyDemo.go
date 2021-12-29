@@ -11,8 +11,8 @@ func main() {
 	newPass, _ := bcrypt.GenerateFromPassword([]byte(pass), 4)
 	fmt.Println(newPass)
 
-	// cost, _ := bcrypt.Cost(newPass)
-	// fmt.Println(cost)
+	cost, _ := bcrypt.Cost(newPass)
+	fmt.Println(cost)
 
 	// decryption
 	err := bcrypt.CompareHashAndPassword(newPass, []byte("Admmin"))
