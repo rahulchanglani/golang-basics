@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	f, _ := os.Create("Data.txt")
+	f, _ := os.Create("Data.txt") // checks and creates if not present
 
 	bdata := []byte("Hi all welcome to Golang")
 
@@ -14,5 +14,7 @@ func main() {
 	f.Write(bdata)
 	fmt.Println("Data written")
 
-	
+	/// another method
+	f.WriteString("\n Acc")
+	fmt.Println("Data updated")
 }
